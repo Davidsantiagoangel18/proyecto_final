@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0e974617320c233fd74c591b3db8cf7d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    
+            <style>
+                #export {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                    z-index: 999;
+                    background: white;
+                    color: black;
+                    padding: 6px;
+                    border-radius: 4px;
+                    font-family: 'Helvetica Neue';
+                    cursor: pointer;
+                    font-size: 12px;
+                    text-decoration: none;
+                    top: 90px;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0e974617320c233fd74c591b3db8cf7d" ></div>
+        
+    <a href='#' id='export'>Export</a>
+</body>
+<script>
+    
+    
+            var map_0e974617320c233fd74c591b3db8cf7d = L.map(
+                "map_0e974617320c233fd74c591b3db8cf7d",
+                {
+                    center: [4.631542830676619, -74.0661021466547],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 17,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_26bed8b901aceddc06315e44a8c579f9 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_26bed8b901aceddc06315e44a8c579f9.addTo(map_0e974617320c233fd74c591b3db8cf7d);
+    
+            var marker_85f337608e12e627c24e25ca9ea48733 = L.marker(
+                [4.630522222, -74.065525],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_4a5aeabd50372565269154c3fef1cf82 = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipNafyDmNOGuK3cWP3LgLyEOVHxHxTCvlxrvfaCd=w408-h544-k-no"});
+        marker_85f337608e12e627c24e25ca9ea48733.setIcon(custom_icon_4a5aeabd50372565269154c3fef1cf82);
+        
+    
+        var popup_c514c1b10b887d2a01bc8d40c874109e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0e603e6d82f1db4ddcb34e3f5ac0930 = $(`<div id="html_e0e603e6d82f1db4ddcb34e3f5ac0930" style="width: 100.0%; height: 100.0%;">         <b>Master Barber Shop</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipNafyDmNOGuK3cWP3LgLyEOVHxHxTCvlxrvfaCd=w408-h544-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: Carrera 13a 32 67 local 8, Bogotá, Colombia<br>         <form id="form_Master Barber Shop">             <textarea id="descripcion_Master Barber Shop" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Master Barber Shop')">         </form>     </div>`)[0];
+                popup_c514c1b10b887d2a01bc8d40c874109e.setContent(html_e0e603e6d82f1db4ddcb34e3f5ac0930);
+            
+        
+
+        marker_85f337608e12e627c24e25ca9ea48733.bindPopup(popup_c514c1b10b887d2a01bc8d40c874109e)
+        ;
+
+        
+    
+    
+            var marker_7972d71372f6a37509ecca5856f4e275 = L.marker(
+                [4.627774100535496, -74.06680007144863],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_186a080cf742189471b3c015b2508773 = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipNtGsM1520GvkgageOVs0iqEmhUDqGOB-p1HwZp=w459-h240-k-no"});
+        marker_7972d71372f6a37509ecca5856f4e275.setIcon(custom_icon_186a080cf742189471b3c015b2508773);
+        
+    
+        var popup_6daf7cafff270c00ab855d756929364d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47ac0817e22836c91e0236dd6de175d1 = $(`<div id="html_47ac0817e22836c91e0236dd6de175d1" style="width: 100.0%; height: 100.0%;">         <b>Berlin Barber Shop</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipNtGsM1520GvkgageOVs0iqEmhUDqGOB-p1HwZp=w459-h240-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: CRA 15 # 95-33, Bogotá, Colombia<br>         <form id="form_Berlin Barber Shop">             <textarea id="descripcion_Berlin Barber Shop" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Berlin Barber Shop')">         </form>     </div>`)[0];
+                popup_6daf7cafff270c00ab855d756929364d.setContent(html_47ac0817e22836c91e0236dd6de175d1);
+            
+        
+
+        marker_7972d71372f6a37509ecca5856f4e275.bindPopup(popup_6daf7cafff270c00ab855d756929364d)
+        ;
+
+        
+    
+    
+            var marker_c8510a6ebdb3ddcedb02fbef8450e6cd = L.marker(
+                [4.628434133840879, -74.0686184891132],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_9bfe43dbb1e3366d7d36853bbf649e4e = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipOjaDb9TZI0ePbaMfZg5LRq9QtqKSJVYv3yZ7Qi=w408-h726-k-no"});
+        marker_c8510a6ebdb3ddcedb02fbef8450e6cd.setIcon(custom_icon_9bfe43dbb1e3366d7d36853bbf649e4e);
+        
+    
+        var popup_9fb4f8ec73c5d47d87b34f58e188293e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4e749fe59e17017ef8cf21dd248ecbfe = $(`<div id="html_4e749fe59e17017ef8cf21dd248ecbfe" style="width: 100.0%; height: 100.0%;">         <b>Barber Shop Ghetto</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipOjaDb9TZI0ePbaMfZg5LRq9QtqKSJVYv3yZ7Qi=w408-h726-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: Av Caracas 40A31, Bogotá, Colombia<br>         <form id="form_Barber Shop Ghetto">             <textarea id="descripcion_Barber Shop Ghetto" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Barber Shop Ghetto')">         </form>     </div>`)[0];
+                popup_9fb4f8ec73c5d47d87b34f58e188293e.setContent(html_4e749fe59e17017ef8cf21dd248ecbfe);
+            
+        
+
+        marker_c8510a6ebdb3ddcedb02fbef8450e6cd.bindPopup(popup_9fb4f8ec73c5d47d87b34f58e188293e)
+        ;
+
+        
+    
+    
+            var marker_df74e4bd26b321f74a042f954220ec20 = L.marker(
+                [4.628884796836012, -74.06681250260608],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_e7b750a95a7717f9bd2614b516e461e4 = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipOH4xJ_Z0cdqtsfrTlXjdAgWtjcruAaxfCOk3Hg=w426-h240-k-no"});
+        marker_df74e4bd26b321f74a042f954220ec20.setIcon(custom_icon_e7b750a95a7717f9bd2614b516e461e4);
+        
+    
+        var popup_0f7b81711f63b1783f0eef96cf47d97f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_15aa504a70f38f48eeeda9a53eefdb0d = $(`<div id="html_15aa504a70f38f48eeeda9a53eefdb0d" style="width: 100.0%; height: 100.0%;">         <b>Cavalier Barbería Clásica Calle 40</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipOH4xJ_Z0cdqtsfrTlXjdAgWtjcruAaxfCOk3Hg=w426-h240-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: Carrera 13a 32 67 local 8, Bogotá, Colombia<br>         <form id="form_Cavalier Barbería Clásica Calle 40">             <textarea id="descripcion_Cavalier Barbería Clásica Calle 40" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Cavalier Barbería Clásica Calle 40')">         </form>     </div>`)[0];
+                popup_0f7b81711f63b1783f0eef96cf47d97f.setContent(html_15aa504a70f38f48eeeda9a53eefdb0d);
+            
+        
+
+        marker_df74e4bd26b321f74a042f954220ec20.bindPopup(popup_0f7b81711f63b1783f0eef96cf47d97f)
+        ;
+
+        
+    
+    
+            var marker_6c994f3911c8f9c32d91b1317e603bac = L.marker(
+                [4.632424560200405, -74.06700148830761],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_cf87926f035f21df711fbdc558684d4a = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipOCAuKrVZoj7hrhnJWVxkAA8x3R-4DkW1zqyWwg=w408-h272-k-no"});
+        marker_6c994f3911c8f9c32d91b1317e603bac.setIcon(custom_icon_cf87926f035f21df711fbdc558684d4a);
+        
+    
+        var popup_0a908a107b8ddceec28d0384e42a69db = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b77c03b7bfbe245db76fb1ea81505ee5 = $(`<div id="html_b77c03b7bfbe245db76fb1ea81505ee5" style="width: 100.0%; height: 100.0%;">         <b>Bad Boys</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipOCAuKrVZoj7hrhnJWVxkAA8x3R-4DkW1zqyWwg=w408-h272-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: Cl. 45 #13-41, Bogotá<br>         <form id="form_Bad Boys">             <textarea id="descripcion_Bad Boys" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Bad Boys')">         </form>     </div>`)[0];
+                popup_0a908a107b8ddceec28d0384e42a69db.setContent(html_b77c03b7bfbe245db76fb1ea81505ee5);
+            
+        
+
+        marker_6c994f3911c8f9c32d91b1317e603bac.bindPopup(popup_0a908a107b8ddceec28d0384e42a69db)
+        ;
+
+        
+    
+    
+            var marker_e1b13c41e4a44a95492510bdb4bd828e = L.marker(
+                [4.632855551818548, -74.06366459096303],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_9db0b42810e80a05f361faa6b5a0be55 = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipO6ev6cUo8FBdadoj20KM2uUcZ8Ms9FQ22i_que=w426-h240-k-no"});
+        marker_e1b13c41e4a44a95492510bdb4bd828e.setIcon(custom_icon_9db0b42810e80a05f361faa6b5a0be55);
+        
+    
+        var popup_8d41b029dee29123d58339e954f8d054 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d7e815c4917da352ea07fcd23c370461 = $(`<div id="html_d7e815c4917da352ea07fcd23c370461" style="width: 100.0%; height: 100.0%;">         <b>Barbería All Handmade</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipO6ev6cUo8FBdadoj20KM2uUcZ8Ms9FQ22i_que=w426-h240-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción:  Cra. 7, Localidad de Chapinero, Bogotá<br>         <form id="form_Barbería All Handmade">             <textarea id="descripcion_Barbería All Handmade" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Barbería All Handmade')">         </form>     </div>`)[0];
+                popup_8d41b029dee29123d58339e954f8d054.setContent(html_d7e815c4917da352ea07fcd23c370461);
+            
+        
+
+        marker_e1b13c41e4a44a95492510bdb4bd828e.bindPopup(popup_8d41b029dee29123d58339e954f8d054)
+        ;
+
+        
+    
+    
+            var marker_ff641b4aca90a45220abf904aa742bc2 = L.marker(
+                [4.630173233930651, -74.06485513577499],
+                {}
+            ).addTo(map_0e974617320c233fd74c591b3db8cf7d);
+        
+    
+        var custom_icon_cd1f529d83dc4607a2d4d553ad9c23f1 = L.icon({"iconSize": [50, 50], "iconUrl": "https://lh5.googleusercontent.com/p/AF1QipNp7zH-O8j915nUh0Ea3_-Ne1Y_xT6Rq6bjZYYM=w408-h503-k-no"});
+        marker_ff641b4aca90a45220abf904aa742bc2.setIcon(custom_icon_cd1f529d83dc4607a2d4d553ad9c23f1);
+        
+    
+        var popup_4e734394719bbd27fce3f984bcc5c825 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8f9b9abba0c7c4247f6e8af8d0760296 = $(`<div id="html_8f9b9abba0c7c4247f6e8af8d0760296" style="width: 100.0%; height: 100.0%;">         <b>Figaro Barber Shop</b><br>         <img src='https://lh5.googleusercontent.com/p/AF1QipNp7zH-O8j915nUh0Ea3_-Ne1Y_xT6Rq6bjZYYM=w408-h503-k-no' alt='Imagen del lugar' style='max-width:300px;'><br>         Descripción: Carrera 7 N° 42-69<br>         <form id="form_Figaro Barber Shop">             <textarea id="descripcion_Figaro Barber Shop" rows="4" cols="50"></textarea><br>             <input type="button" value="Guardar Descripción" onclick="guardarDescripcion('Figaro Barber Shop')">         </form>     </div>`)[0];
+                popup_4e734394719bbd27fce3f984bcc5c825.setContent(html_8f9b9abba0c7c4247f6e8af8d0760296);
+            
+        
+
+        marker_ff641b4aca90a45220abf904aa742bc2.bindPopup(popup_4e734394719bbd27fce3f984bcc5c825)
+        ;
+
+        
+    
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems_draw_control_00416a6aa786cf7c28946f1d90b2543e = new L.featureGroup().addTo(
+                map_0e974617320c233fd74c591b3db8cf7d
+            );
+            options.edit.featureGroup = drawnItems_draw_control_00416a6aa786cf7c28946f1d90b2543e;
+            var draw_control_00416a6aa786cf7c28946f1d90b2543e = new L.Control.Draw(
+                options
+            ).addTo( map_0e974617320c233fd74c591b3db8cf7d );
+            map_0e974617320c233fd74c591b3db8cf7d.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems_draw_control_00416a6aa786cf7c28946f1d90b2543e.addLayer(layer);
+             });
+            map_0e974617320c233fd74c591b3db8cf7d.on('draw:created', function(e) {
+                drawnItems_draw_control_00416a6aa786cf7c28946f1d90b2543e.addLayer(e.layer);
+            });
+            
+            document.getElementById('export').onclick = function(e) {
+                var data = drawnItems_draw_control_00416a6aa786cf7c28946f1d90b2543e.toGeoJSON();
+                var convertedData = 'text/json;charset=utf-8,'
+                    + encodeURIComponent(JSON.stringify(data));
+                document.getElementById('export').setAttribute(
+                    'href', 'data:' + convertedData
+                );
+                document.getElementById('export').setAttribute(
+                    'download', "data.geojson"
+                );
+            }
+            
+        
+</script>
+</html>
